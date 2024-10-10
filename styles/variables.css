@@ -6,8 +6,9 @@
   --accent-font: "Press Start 2P";
   --background-color: #ffffff;
   --text-color: #000000;
-  --weight-main-font: 400;
-  --weight-accent-font: 700;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  --block-text-weight: 400;
   --background-image: 
     repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(0deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),

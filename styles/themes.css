@@ -7,8 +7,8 @@
 :root.theme-dark {
   --background-color: #000000;
   --text-color: #00cc14;
-  --weight-main-font: 465;
-  --weight-accent-font: 785;
+  --main-font-weight: 465;
+  --accent-font-weight: 785;
   --background-image: repeating-linear-gradient(
       90deg,
       #000,
@@ -34,8 +34,8 @@
   :root {
     --background-color: #000000;
     --text-color: #00cc14;
-    --weight-main-font: 465;
-    --weight-accent-font: 785;
+    --main-font-weight: 465;
+    --accent-font-weight: 785;
     --background-image: repeating-linear-gradient(
         90deg,
         #000,
@@ -61,8 +61,8 @@
 :root.theme-light {
   --background-color: #ffffff;
   --text-color: #000000;
-  --weight-main-font: 400;
-  --weight-accent-font: 700;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
   --background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3,

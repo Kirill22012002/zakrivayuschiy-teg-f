@@ -157,6 +157,13 @@ button {
   padding-bottom: 25px;
 }
 
+.card_text {
+  font-family: var(--main-font);
+  font-weight: var(--main-font-weight);
+  font-size: 18px;
+  line-height: 21px;
+}
+
 .card_title {
   padding: 3px 0 3px 10px;
   font-family: var(--main-font);
