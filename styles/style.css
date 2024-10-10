@@ -20,16 +20,16 @@
   min-height: 960px;
   color: var(--text-color);
   font-family: var(--main-font), sans-serif;
-  background-color: var(--background-color);
   background-image: var(--background-image);
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-text-weight-light);
 }
 
 :root {
-  color-scheme: normal; /*правильно ли?*/
+  color-scheme: normal;
 }
 
 .header {
@@ -86,11 +86,6 @@
   margin: 0 auto;
 }
 
-.theme-menu {
-  font-family: var(--accent-font);
-  text-transform: uppercase;
-}
-
 .theme-menu__list {
   display: flex;
   flex-direction: column;
@@ -102,10 +97,22 @@
 .theme-menu__button {
   border: medium none;
   background-color: transparent;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  position: relative;
+
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
 }
 
 .main {
@@ -196,7 +203,7 @@
   filter: blur(1rem);
 }
 
-.footer {
+.save {
   display: flex;
   justify-content: center;
   width: 335px;
@@ -206,7 +213,7 @@
 }
 
 @media (width <= 375px) {
-  .footer {
+  .save {
     width: 306px;
     height: 84px;
   }
