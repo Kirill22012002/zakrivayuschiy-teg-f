@@ -13,6 +13,14 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+footer {
+  margin-top: 1200px;
+}
+
+button {
+  cursor: pointer;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -95,19 +103,18 @@
 }
 
 .theme-menu__button {
+  position: relative;
   border: medium none;
-  background-color: transparent;
   font-family: var(--accent-font);
   text-transform: uppercase;
-  position: relative;
-
+  background-color: transparent;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  left: -12px;
   top: 50%;
+  left: -12px;
   transform: translateY(-50%);
 }
 
@@ -118,6 +125,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: clamp(695px, 696px, 697px);
   background-color: var(--main-bg-color);
 }
@@ -170,11 +178,16 @@
   background-color: transparent;
 }
 
-.button-like {
+.like {
   display: flex;
-  flex-direction: row;
   gap: 12px;
   align-self: flex-end;
+}
+
+.card__icon-button {
+  border: none;
+  color: inherit;
+  background: none;
 }
 
 .picture-img {
@@ -203,9 +216,11 @@
   filter: blur(1rem);
 }
 
-.save {
+.floppy-button {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 8px;
   width: 335px;
   height: 55px;
   border: var(--border-card);
@@ -213,10 +228,14 @@
 }
 
 @media (width <= 375px) {
-  .save {
+  .floppy-button {
     width: 306px;
     height: 84px;
   }
+}
+
+.floppy-image {
+  width: 21px;
 }
 
 .footer_button {
@@ -243,4 +262,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
 }
