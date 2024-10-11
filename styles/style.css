@@ -105,9 +105,17 @@ button {
 .theme-menu__button {
   position: relative;
   border: medium none;
+  outline: none;
   font-family: var(--accent-font);
   text-transform: uppercase;
   background-color: transparent;
+  transition: opacity 0.3s ease;
+  padding: 0;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -116,9 +124,41 @@ button {
   top: 50%;
   left: -12px;
   transform: translateY(-50%);
+  animation: pointer_anim 0.5s ease-in-out infinite alternate;
 }
 
-.theme-menu__button:disabled {
+@keyframes pointer_anim {
+  from {
+    left: -20px;
+  }
+  to {
+    left: -16px;
+  }
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-menu-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus {
+  opacity: 0.7;
+}
+
+.theme-menu__button:hover {
   opacity: 0.6;
 }
 
@@ -127,7 +167,6 @@ button {
   flex-direction: column;
   align-items: center;
   width: clamp(695px, 696px, 697px);
-  background-color: var(--main-bg-color);
 }
 
 @media (width <= 375px) {
@@ -145,6 +184,7 @@ button {
 
 .card {
   outline: var(--border-card);
+  background-color: var(--card-bg-color);
 }
 
 .card_text-block {
@@ -175,6 +215,12 @@ button {
   font-weight: 400;
 }
 
+.like {
+  display: flex;
+  gap: 12px;
+  align-self: flex-end;
+}
+
 .card__like-button {
   display: flex;
   justify-content: center;
@@ -183,12 +229,16 @@ button {
   height: 38px;
   border: var(--border-card);
   background-color: transparent;
+  outline: none;
 }
 
-.like {
-  display: flex;
-  gap: 12px;
-  align-self: flex-end;
+.card__like-button:focus {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 2px 2px 0 0 black;
+}
+
+.card__like-button:hover {
+  box-shadow: none;
 }
 
 .card__icon-button {
@@ -197,10 +247,42 @@ button {
   background: none;
 }
 
+.like-icon {
+  fill: var(--heart-color);
+}
+
 .picture-img {
-  display: flex;
-  justify-content: center;
-  outline: var(--border-card);
+  position: relative;
+}
+
+.lable-link {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  color: var(--text-color);
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-shadow: 0 0 1px var(--lable-text-shadow);
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--lable-text-shadow)) or
+    (-webkit-text-stroke: 1px var(--lable-text-shadow))
+) {
+  .lable-link {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--lable-text-shadow);
+    mix-blend-mode: hard-light;
+  }
+}
+
+.picture-base {
+  max-width: 696px;
+  max-height: 696px;
 }
 
 .picture_with-sepia {

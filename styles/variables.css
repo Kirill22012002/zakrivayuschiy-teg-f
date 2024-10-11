@@ -15,6 +15,9 @@
     linear-gradient(0.01% 0, #e7e7e7 #1a1a1a);
   --header_width: clamp(650px, 700px, 750px);
   --header-bg-color: #fff;
-  --main-bg-color: #fff;
+  --card-bg-color: #fff;
   --border-card: 2px solid #000;
+  --lable-text-shadow: #fff;
+  --heart-color: #000;
+  --border-menu-color: #000;
 }
