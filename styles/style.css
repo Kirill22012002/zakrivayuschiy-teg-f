@@ -281,12 +281,22 @@ button {
 }
 
 .card__icon-button {
-  border: none;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--heart-border-color);
+  outline: none;
   color: inherit;
   background: none;
 }
 
+.card__icon-button:focus-visible {
+  border-color: var(--focus-heart-border-color);
+  transition: border-color 0.3s ease;
+}
+
 .like-icon {
+  width: 27px;
+  height: 24px;
   fill: var(--heart-color);
 }
 

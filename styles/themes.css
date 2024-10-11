@@ -7,6 +7,7 @@
 :root.theme-dark {
   --background-color: #000000;
   --text-color: #00cc14;
+  --accent-color: #00cc14;
   --main-font-weight: 465;
   --accent-font-weight: 785;
   --background-image: repeating-linear-gradient(
@@ -34,12 +35,16 @@
   --btn-background-slide: #00cc14;
   --btn-text-color: #00cc14;
   --btn-shadow: #00cc14;
+  --heart-border-color: #000;
+  --focus-heart-border-color: #00cc14;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000000;
     --text-color: #00cc14;
+    --accent-color: #00cc14;
     --main-font-weight: 465;
     --accent-font-weight: 785;
     --background-image: repeating-linear-gradient(
@@ -67,12 +72,15 @@
     --btn-background-slide: #00cc14;
     --btn-text-color: #00cc14;
     --btn-shadow: #00cc14;
+    --heart-border-color: #000;
+    --focus-heart-border-color: #00cc14;  
   }
 }
 
 :root.theme-light {
   --background-color: #fff;
   --text-color: #000;
+  --accent-color: #000;
   --main-font-weight: 400;
   --accent-font-weight: 700;
   --background-image: repeating-linear-gradient(
@@ -100,4 +108,6 @@
   --btn-background-slide: #000;
   --btn-text-color: #fff;
   --btn-shadow: #000;
+  --heart-border-color: #fff;
+  --focus-heart-border-color: #000;
 }
