@@ -31,6 +31,7 @@
   --lable-text-shadow: #000;
   --heart-color: #00cc14;
   --border-menu-color: #00cc14;
+  --btn-background-slide: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,6 +62,7 @@
     --lable-text-shadow: #000;
     --heart-color: #00cc14;
     --border-menu-color: #00cc14;
+    --btn-background-slide: #00cc14;
   }
 }
 
@@ -91,4 +93,5 @@
   --lable-text-shadow: #fff;
   --heart-color: #000;
   --border-menu-color: #000;
+  --btn-background-slide: #000;
 }
