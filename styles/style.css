@@ -211,7 +211,23 @@ button {
 }
 
 .button__text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--btn-text-color);
+  font-family: var(--accent-font);
   font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+  mix-blend-mode: difference;
+}
+
+.floppy-image {
+  position: relative;
+  width: 21px;
+  fill: var(--btn-text-color);
+  mix-blend-mode: difference;
 }
 
 .like {
@@ -229,11 +245,11 @@ button {
   height: 38px;
   border: var(--border-card);
   outline: none;
-  background-color: transparent;
+  background-color: var(--background-color);
 }
 
 .card__like-button:focus {
-  box-shadow: 2px 2px 0 0 black;
+  box-shadow: 2px 2px 0 0 var(--btn-shadow);
   transition: box-shadow 0.3s ease;
 }
 
@@ -260,8 +276,8 @@ button {
 }
 
 .btn-background-slide {
-  transition: color 0.5s ease-in-out;
   z-index: 1;
+  transition: color 0.5s ease-in-out;
 }
 
 .card__icon-button {
@@ -347,10 +363,6 @@ button {
   }
 }
 
-.floppy-image {
-  width: 21px;
-}
-
 .footer_button {
   display: flex;
   flex-direction: row;
@@ -369,14 +381,4 @@ button {
     display: flex;
     flex-direction: column;
   }
-}
-
-.button__text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--accent-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 12.6px;
 }
