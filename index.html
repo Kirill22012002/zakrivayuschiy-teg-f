@@ -150,7 +150,12 @@
           </div>
         </section>
       </section>
-      <button class="floppy-button btn-background-slide">
+      <button 
+        type="button" 
+        onclick="window['dialog-floppy'].showModal()" 
+        area-controls="dialog-floppy" 
+        class="floppy-button btn-background-slide">
+
         <svg viewBox="0 0 29 28" class="floppy-image">
           <use href="#floppy">
         </svg>
@@ -158,8 +163,23 @@
       </button>
     </main>
     <footer class="footer"></footer>
+    <dialog class="dialog" id="dialog-floppy" close>
+
+      <div class="application">
+        <svg viewBox="0 0 29 28" class="floppy-image floppy-image-dialog">
+          <use href="#floppy">
+        </svg>
+        <span class="button__text dialog__text">Вставьте<br/>дискету, чтобы<br/>продолжить</span>
+      </div>
+        
+      <button type="button" class="btn-dialog" onclick="window['dialog-floppy'].close()">
+        OK
+      </button>
+    
+    </dialog>  
     <script src="./scripts/like.js"></script>
   </body>
+  
 </html>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 28">

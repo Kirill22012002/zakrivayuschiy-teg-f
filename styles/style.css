@@ -391,6 +391,7 @@ button {
 
 .contour {
   fill: var(--heart-contour-color);
+  transition: opacity 0.1s ease;
 }
 
 .main-body {
@@ -421,31 +422,103 @@ button {
 }
 
 .like-icon:active .core {
-  fill: var(--fill-color);
   opacity: 1;
+  fill: var(--fill-color);
   transition: opacity 0.3s ease;
 }
 
 .like-icon:active .main-body {
-  fill: var(--fill-color);
   opacity: 1;
+  fill: var(--fill-color);
   transition: opacity 0.3s ease 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--fill-color);
   opacity: 1;
+  fill: var(--fill-color);
   transition: opacity 0.3s ease;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--fill-color);
   opacity: 1;
+  fill: var(--fill-color);
   transition: opacity 0.3s ease 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--fill-color);
   opacity: 1;
+  fill: var(--fill-color);
   transition: opacity 0.3s ease 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: zoom 0.3s 0.1s ease-in 1 alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-opacity 0.3s 0.3s ease-in 1 alternate;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparks-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  border: 2px var(--accent-color) solid;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+.dialog[open] .application {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 293px;
+  min-height: 63px;
+  margin: 30px 30px 0 30px;
+}
+
+.floppy-image-dialog {
+  width: 39px;
+}
+
+.dialog__text {
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.btn-dialog {
+  min-width: 293px;
+  min-height: 38px;
+  margin: 30px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+  background-color: var(--background-color);
+}
+
+.dialog::backdrop {
+  opacity: 0.75;
+  background-color: #000;
 }
