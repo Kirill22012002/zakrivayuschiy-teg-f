@@ -13,10 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-footer {
-  margin-top: 1200px;
-}
-
 button {
   cursor: pointer;
 }
@@ -312,6 +308,7 @@ button {
   line-height: 14px;
   text-shadow: 0 0 1px var(--lable-text-shadow);
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 
 @supports (
@@ -323,31 +320,6 @@ button {
     -webkit-text-stroke: 1px var(--lable-text-shadow);
     mix-blend-mode: hard-light;
   }
-}
-
-.picture-base {
-  max-width: 696px;
-  max-height: 696px;
-}
-
-.picture_with-sepia {
-  filter: sepia(70%);
-}
-
-.picture_with-saturate {
-  filter: saturate(400%);
-}
-
-.picture_with-invert {
-  filter: invert(0.8);
-}
-
-.picture_with-hue-rotate {
-  filter: hue-rotate(20deg);
-}
-
-.picture_with-blur {
-  filter: blur(1rem);
 }
 
 .floppy-button {
@@ -521,4 +493,38 @@ button {
 .dialog::backdrop {
   opacity: 0.75;
   background-color: #000;
+}
+
+.picture-base {
+  max-width: 696px;
+  max-height: 696px;
+}
+
+.picture_with-sepia {
+  filter: sepia(70%);
+}
+
+.picture_with-saturate {
+  filter: saturate(400%);
+}
+
+.picture_with-hue-rotate {
+  filter: hue-rotate(50%);
+}
+
+.picture_with-invert {
+  filter: invert(0.8);
+}
+
+.picture_with-grayscale-and-sepia {
+  filter: grayscale(90%);
+  filter: sepia(0.8);
+}
+
+.picture_with-blur {
+  filter: blur(1rem);
+}
+
+.picture_with-hue-rotate {
+  filter: hue-rotate(70deg);
 }
