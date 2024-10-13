@@ -46,13 +46,6 @@ button {
   background-color: var(--header-bg-color);
 }
 
-@media (width <= 375px) {
-  .header {
-    width: clamp(374px, 375px, 376px);
-    height: clamp(326px, 327px, 328px);
-  }
-}
-
 .header_width {
   width: var(--header_width);
 }
@@ -93,9 +86,14 @@ button {
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
   font-weight: 400;
   font-size: 14px;
+}
+
+.theme-menu__item {
+  line-height: 14px;
+  margin-left: 15px;
 }
 
 .theme-menu__button {
@@ -217,6 +215,7 @@ button {
   font-size: 14px;
   line-height: 12.6px;
   mix-blend-mode: difference;
+  white-space: nowrap;
 }
 
 .floppy-image {
@@ -237,11 +236,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 130px;
-  height: 38px;
   border: var(--border-card);
   outline: none;
   background-color: var(--background-color);
+  padding: 12.5px 37px;
 }
 
 .card__like-button:focus {
@@ -328,17 +326,9 @@ button {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: 335px;
-  height: 55px;
   border: var(--border-card);
   background-color: var(--background-color);
-}
-
-@media (width <= 375px) {
-  .floppy-button {
-    width: 306px;
-    height: 84px;
-  }
+  padding: 15px 21px 15px 19px;
 }
 
 .footer_button {
@@ -527,4 +517,42 @@ button {
 
 .picture_with-hue-rotate {
   filter: hue-rotate(70deg);
+}
+
+@media (width <= 376px) {
+  .main {
+    width: 0;
+  }
+
+  .header_logo {
+    font-size: 49px;
+    font-weight: 400;
+    line-height: 49px;
+  }
+
+  .header_width {
+    width: 371px;
+  }
+
+  .header_logo-title {
+    font-size: 14px;
+  }
+
+  .picture-base {
+    max-width: 371px;
+    max-height: 371px;
+  }
+
+  .card {
+    width: 371px;
+  }
+
+  .floppy-button {
+    flex-direction: column;
+    padding: 15px 20.5px 15px 19.5px;
+  }
+
+  .floppy-image {
+    width: 28px;
+  }
 }
