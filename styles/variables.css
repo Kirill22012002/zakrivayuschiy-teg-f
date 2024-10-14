@@ -3,7 +3,7 @@
 
 :root {
   --main-font: "Inter", sans-serif;
-  --accent-font: "Press Start 2P";
+  --accent-font: "Press Start 2P", "Arial", sans-serif;
   --background-color: #fff;
   --text-color: #000;
   --accent-color: #000;
