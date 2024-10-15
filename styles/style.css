@@ -81,8 +81,8 @@ button {
 }
 
 .theme-menu__item {
-  line-height: 14px;
   margin-left: 15px;
+  line-height: 14px;
 }
 
 .theme-menu__button {
@@ -217,9 +217,9 @@ button {
   justify-content: center;
   align-items: center;
   border: var(--border-card);
+  padding: 12.5px 37px;
   outline: none;
   background-color: var(--background-color);
-  padding: 12.5px 37px;
 }
 
 .card__like-button:focus {
@@ -278,6 +278,7 @@ button {
   position: absolute;
   top: 25px;
   right: 25px;
+  z-index: 1;
   opacity: 0.5;
   color: var(--text-color);
   font-family: var(--accent-font);
@@ -286,7 +287,6 @@ button {
   line-height: 14px;
   text-shadow: 0 0 1px var(--lable-text-shadow);
   mix-blend-mode: hard-light;
-  z-index: 1;
 }
 
 @supports (
@@ -307,8 +307,8 @@ button {
   align-items: center;
   gap: 8px;
   border: var(--border-card);
-  background-color: var(--background-color);
   padding: 15px 21px 15px 19px;
+  background-color: var(--background-color);
 }
 
 .footer_button {
@@ -415,8 +415,8 @@ button {
   }
 
   .header_logo {
-    font-size: 49px;
     font-weight: 400;
+    font-size: 49px;
     line-height: 49px;
   }
 
