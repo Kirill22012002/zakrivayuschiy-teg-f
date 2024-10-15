@@ -12,14 +12,14 @@
   --accent-font-weight: 785;
   --background-image: repeating-linear-gradient(
       90deg,
-      #000,
+      #000 0,
       #000 2px,
       transparent 2px,
       transparent 4px
     ),
     repeating-linear-gradient(
       0deg,
-      #000,
+      #000 0,
       #000 2px,
       transparent 2px,
       transparent 4px
@@ -74,7 +74,7 @@
     --btn-text-color: #00cc14;
     --btn-shadow: #00cc14;
     --heart-border-color: #000;
-    --focus-heart-border-color: #00cc14;  
+    --focus-heart-border-color: #00cc14;
     --heart-contour-color: #00cc14;
     --fill-color: #ff0000;
   }
