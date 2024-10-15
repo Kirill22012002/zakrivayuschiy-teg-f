@@ -25,7 +25,6 @@
       transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  --header_width: clamp(650px, 700px, 750px);
   --header-bg-color: #fff;
   --card-bg-color: #fff;
   --border-card: 2px solid #000;

@@ -21,6 +21,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: var(--text-color);
   font-family: var(--main-font), sans-serif;
   background-image: var(--background-image);
@@ -29,30 +30,25 @@ button {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-text-weight-light);
+  margin-bottom: 20px;
 }
 
 .header {
-  width: clamp(699px, 700px, 701px);
-  margin: auto;
-  margin-top: 102px;
-  margin-bottom: 102px;
+  margin: 100px 0;
   border: var(--border-card);
   background-color: var(--header-bg-color);
-}
-
-.header_width {
-  width: var(--header_width);
+  width: clamp(375px, 100%, 700px);
 }
 
 .header_logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-  padding-top: clamp(135px, 136px, 137px);
+  margin: 0 14px 20px 14px;
+  padding-top: clamp(120px, 136px, 136px);
   font-family: var(--accent-font);
   font-weight: 400;
-  font-size: clamp(64px, 65px, 66px);
   line-height: 65px;
+  font-size: clamp(49px, 10vw, 65px);
 }
 
 .header_logo-title {
@@ -61,8 +57,8 @@ button {
   margin-bottom: 25px;
   font-family: var(--accent-font);
   font-weight: 400;
-  font-size: clamp(22px, 23px, 24px);
   text-transform: uppercase;
+  font-size: clamp(14px, 4vw, 23px);
 }
 
 .theme-menu {
@@ -139,18 +135,12 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(695px, 696px, 697px);
-}
-
-@media (width <= 375px) {
-  .main {
-    width: clamp(374px, 375px, 376px);
-  }
-}
+} 
 
 .cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
   margin-bottom: 50px;
 }
@@ -158,16 +148,17 @@ button {
 .card {
   outline: var(--border-card);
   background-color: var(--card-bg-color);
+  width: clamp(375px, 100%, 696px);
+}
+
+.picture-base {
+  width: clamp(375px, 100%, 696px);
 }
 
 .card_text-block {
   display: flex;
   flex-direction: column;
-  gap: 27px;
-  margin-right: 25px;
-  margin-left: 25px;
-  padding-top: 27px;
-  padding-bottom: 25px;
+  margin: 21px 25px 25px 25px;
 }
 
 .card_text {
@@ -175,10 +166,20 @@ button {
   font-weight: var(--main-font-weight);
   font-size: 18px;
   line-height: 21px;
+  padding-right: 7px;
+  word-spacing: 1px;
+}
+
+.knowledge_card_text {
+  margin-bottom: 27px;
+}
+
+.memories_card_text {
+  margin-bottom: 25px;
 }
 
 .card_title {
-  padding: 3px 0 3px 10px;
+  padding: 6px 0 3px 10px;
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 18px;
@@ -207,7 +208,7 @@ button {
 
 .like {
   display: flex;
-  gap: 12px;
+  gap: 4px;
   align-self: flex-end;
 }
 
@@ -217,14 +218,8 @@ button {
   justify-content: center;
   align-items: center;
   border: var(--border-card);
-  padding: 12.5px 37px;
-  outline: none;
   background-color: var(--background-color);
-}
-
-.card__like-button:focus {
-  box-shadow: 2px 2px 0 0 var(--btn-shadow);
-  transition: box-shadow 0.3s ease;
+  width: 130px;
 }
 
 .card__like-button:hover {
@@ -263,6 +258,7 @@ button {
   outline: none;
   color: inherit;
   background: none;
+
 }
 
 .card__icon-button:focus-visible {
@@ -359,6 +355,7 @@ button {
 }
 
 .btn-dialog {
+  position: relative;
   min-width: 293px;
   min-height: 38px;
   margin: 30px;
@@ -371,14 +368,15 @@ button {
   background-color: var(--background-color);
 }
 
+.btn-shadow:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--btn-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
 .dialog::backdrop {
   opacity: 0.75;
   background-color: #000;
-}
-
-.picture-base {
-  max-width: 696px;
-  max-height: 696px;
 }
 
 .picture_with-sepia {
