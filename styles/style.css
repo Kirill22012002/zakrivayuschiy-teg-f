@@ -387,10 +387,6 @@ button {
   filter: saturate(400%);
 }
 
-.picture_with-hue-rotate {
-  filter: hue-rotate(50%);
-}
-
 .picture_with-invert {
   filter: invert(0.8);
 }
