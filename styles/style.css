@@ -20,24 +20,23 @@ button {
 .page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 103px;
   color: var(--text-color);
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font);
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--main-text-weight-light);
-  margin-bottom: 20px;
 }
 
 .header {
+  width: clamp(375px, 100%, 700px);
   margin: 100px 0;
   border: var(--border-card);
   background-color: var(--header-bg-color);
-  width: clamp(375px, 100%, 700px);
 }
 
 .header_logo {
@@ -47,8 +46,8 @@ button {
   padding-top: clamp(120px, 136px, 136px);
   font-family: var(--accent-font);
   font-weight: 400;
-  line-height: 65px;
   font-size: clamp(49px, 10vw, 65px);
+  line-height: 65px;
 }
 
 .header_logo-title {
@@ -57,8 +56,8 @@ button {
   margin-bottom: 25px;
   font-family: var(--accent-font);
   font-weight: 400;
-  text-transform: uppercase;
   font-size: clamp(14px, 4vw, 23px);
+  text-transform: uppercase;
 }
 
 .theme-menu {
@@ -135,20 +134,20 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
 
 .cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 51px;
   margin-bottom: 50px;
 }
 
 .card {
+  width: clamp(375px, 100%, 696px);
   outline: var(--border-card);
   background-color: var(--card-bg-color);
-  width: clamp(375px, 100%, 696px);
 }
 
 .picture-base {
@@ -158,16 +157,15 @@ button {
 .card_text-block {
   display: flex;
   flex-direction: column;
-  margin: 21px 25px 25px 25px;
+  margin: 26px 25px 24px 25px;
 }
 
 .card_text {
+  margin-bottom: 27px;
   font-family: var(--main-font);
   font-weight: var(--main-font-weight);
   font-size: 18px;
   line-height: 21px;
-  padding-right: 7px;
-  word-spacing: 1px;
 }
 
 .knowledge_card_text {
@@ -179,9 +177,9 @@ button {
 }
 
 .card_title {
-  padding: 6px 0 3px 10px;
+  padding: 6px 10px 3px 10px;
   font-family: var(--main-font);
-  font-weight: 700;
+  font-weight: var(--accent-font-weight);
   font-size: 18px;
 }
 
@@ -217,9 +215,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 130px;
   border: var(--border-card);
   background-color: var(--background-color);
-  width: 130px;
 }
 
 .card__like-button:hover {
@@ -258,7 +256,6 @@ button {
   outline: none;
   color: inherit;
   background: none;
-
 }
 
 .card__icon-button:focus-visible {
@@ -369,8 +366,8 @@ button {
 }
 
 .btn-shadow:focus {
-  outline: none;
   box-shadow: 2px 2px 0 0 var(--btn-shadow);
+  outline: none;
   transition: box-shadow 0.3s ease;
 }
 
@@ -404,11 +401,16 @@ button {
 }
 
 @media (width <= 376px) {
+  .page {
+    margin-bottom: 100px;
+  }
+
   .main {
     width: 0;
   }
 
   .header_logo {
+    padding-top: 123px;
     font-weight: 400;
     font-size: 49px;
     line-height: 49px;

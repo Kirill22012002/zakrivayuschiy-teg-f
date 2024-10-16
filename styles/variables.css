@@ -2,7 +2,7 @@
 а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-font: "Inter", sans-serif;
+  --main-font: "Inter";
   --accent-font: "Press Start 2P", "Arial", sans-serif;
   --background-color: #fff;
   --text-color: #000;
