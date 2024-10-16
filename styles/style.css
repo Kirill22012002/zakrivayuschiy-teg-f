@@ -30,6 +30,7 @@ button {
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-font-weight);
 }
 
 .header {
@@ -179,8 +180,8 @@ button {
 .card_title {
   padding: 6px 10px 3px 10px;
   font-family: var(--main-font);
-  font-weight: var(--accent-font-weight);
   font-size: 18px;
+  font-variation-settings: "wght" var(--accent-font-weight);
 }
 
 .button__text {
